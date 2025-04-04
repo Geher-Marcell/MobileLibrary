@@ -5,8 +5,47 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_PROJECT"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="600">
     <Grid>
-
+        <Grid.Resources>
+            <Style TargetType="Button">
+                <Setter Property="Margin" Value="0, 5"></Setter>
+                <Setter Property="Height" Value="30"></Setter>
+                <Setter Property="FontSize" Value="18"></Setter>
+            </Style>
+        </Grid.Resources>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <ListView Margin="10" x:Name="Lv_Data">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Cursor="UpArrow">
+                        <TextBlock Text="Samsung Galaxy S22" FontSize="20"/>
+                        <TextBlock Text="2022"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <GroupBox Header="Kereső" Margin="10" Grid.Row="0" Padding="10" FontSize="14">
+                <StackPanel VerticalAlignment="Center">
+                    <TextBox x:Name="Tb_Search" Height="30" Margin="0, 5"></TextBox>
+                    <Button x:Name="Btn_Search">Keresés</Button>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Header="Gombok" Margin="10" Grid.Row="1" Padding="10" FontSize="14">
+                <StackPanel Grid.Row="1" Margin="10" VerticalAlignment="Center">
+                    <Button x:Name="Btn_New">Új felvétele</Button>
+                    <Button x:Name="Btn_Modify">Módosítás</Button>
+                    <Button x:Name="Btn_Delete">Törlés</Button>
+                </StackPanel>
+            </GroupBox>
+        </Grid>
     </Grid>
 </Window>

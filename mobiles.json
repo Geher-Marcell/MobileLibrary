@@ -1,5 +1,4 @@
-{
-  "phones": [
+[
     {
       "name": "Samsung Galaxy S23 Ultra",
       "display": {
@@ -182,5 +181,4 @@
       },
       "main_camera": 50
     }
-  ]
-}
+]
