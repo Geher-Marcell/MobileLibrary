@@ -16,6 +16,8 @@ namespace WPF_PROJECT
     /// </summary>
     public partial class MainWindow : Window
     {
+        public List<Phone> phones = new List<Phone>();
+
         public MainWindow()
         {
             InitializeComponent();
