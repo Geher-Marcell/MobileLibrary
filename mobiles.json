@@ -1,0 +1,186 @@
+{
+  "phones": [
+    {
+      "name": "Samsung Galaxy S23 Ultra",
+      "display": {
+        "size": 6.8,
+        "type": "Dynamic AMOLED"
+      },
+      "release": 2023,
+      "battery": 5000,
+      "rom": {
+        "type": "android",
+        "version": 13
+      },
+      "main_camera": 200
+    },
+    {
+      "name": "iPhone 14 Pro Max",
+      "display": {
+        "size": 6.7,
+        "type": "Super Retina XDR"
+      },
+      "release": 2022,
+      "battery": 4323,
+      "rom": {
+        "type": "iOS",
+        "version": 16
+      },
+      "main_camera": 48
+    },
+    {
+      "name": "Google Pixel 7 Pro",
+      "display": {
+        "size": 6.7,
+        "type": "LTPO OLED"
+      },
+      "release": 2022,
+      "battery": 5000,
+      "rom": {
+        "type": "android",
+        "version": 13
+      },
+      "main_camera": 50
+    },
+    {
+      "name": "OnePlus 11",
+      "display": {
+        "size": 6.7,
+        "type": "Fluid AMOLED"
+      },
+      "release": 2023,
+      "battery": 5000,
+      "rom": {
+        "type": "android",
+        "version": 13
+      },
+      "main_camera": 50
+    },
+    {
+      "name": "Xiaomi 13 Pro",
+      "display": {
+        "size": 6.73,
+        "type": "LTPO OLED"
+      },
+      "release": 2023,
+      "battery": 4820,
+      "rom": {
+        "type": "android",
+        "version": 13
+      },
+      "main_camera": 50
+    },
+    {
+      "name": "Samsung Galaxy Z Fold 4",
+      "display": {
+        "size": 7.6,
+        "type": "Dynamic AMOLED"
+      },
+      "release": 2022,
+      "battery": 4400,
+      "rom": {
+        "type": "android",
+        "version": 12
+      },
+      "main_camera": 50
+    },
+    {
+      "name": "iPhone 13 Mini",
+      "display": {
+        "size": 5.4,
+        "type": "Super Retina XDR"
+      },
+      "release": 2021,
+      "battery": 2438,
+      "rom": {
+        "type": "iOS",
+        "version": 15
+      },
+      "main_camera": 12
+    },
+    {
+      "name": "Sony Xperia 1 IV",
+      "display": {
+        "size": 6.5,
+        "type": "OLED"
+      },
+      "release": 2022,
+      "battery": 5000,
+      "rom": {
+        "type": "android",
+        "version": 12
+      },
+      "main_camera": 12
+    },
+    {
+      "name": "Asus ROG Phone 7",
+      "display": {
+        "size": 6.78,
+        "type": "AMOLED"
+      },
+      "release": 2023,
+      "battery": 6000,
+      "rom": {
+        "type": "android",
+        "version": 13
+      },
+      "main_camera": 50
+    },
+    {
+      "name": "Realme GT 3",
+      "display": {
+        "size": 6.74,
+        "type": "AMOLED"
+      },
+      "release": 2023,
+      "battery": 4600,
+      "rom": {
+        "type": "android",
+        "version": 13
+      },
+      "main_camera": 50
+    },
+    {
+      "name": "Vivo X90 Pro+",
+      "display": {
+        "size": 6.78,
+        "type": "LTPO4 AMOLED"
+      },
+      "release": 2023,
+      "battery": 4700,
+      "rom": {
+        "type": "android",
+        "version": 13
+      },
+      "main_camera": 50
+    },
+    {
+      "name": "Huawei P50 Pro",
+      "display": {
+        "size": 6.6,
+        "type": "OLED"
+      },
+      "release": 2021,
+      "battery": 4360,
+      "rom": {
+        "type": "HarmonyOS",
+        "version": 2
+      },
+      "main_camera": 50
+    },
+    {
+      "name": "Nothing Phone (1)",
+      "display": {
+        "size": 6.55,
+        "type": "OLED"
+      },
+      "release": 2022,
+      "battery": 4500,
+      "rom": {
+        "type": "android",
+        "version": 12
+      },
+      "main_camera": 50
+    }
+  ]
+}
