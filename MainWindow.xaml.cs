@@ -73,7 +73,12 @@ namespace WPF_PROJECT
         private void Btn_New_Click(object sender, RoutedEventArgs e)
         {
             DetatilsWindow detatilsWindow = new DetatilsWindow();
-            detatilsWindow.ShowDialog();
+            if(detatilsWindow.ShowDialog() == true)
+            {
+                Phones.Add(detatilsWindow.onePhone);
+                Btn_Search_Click(sender, e);    
+            }
+
         }
 
         private void Btn_Modify_Click(object sender, RoutedEventArgs e)
@@ -81,8 +86,16 @@ namespace WPF_PROJECT
             if (HaveSelectedItem)
             {
                 Phone currPhone = SelectedItem.Clone();
+                MessageBox.Show(currPhone.Name);
+                MessageBox.Show(currPhone.MainCamera.ToString());
                 DetatilsWindow detatilsWindow = new DetatilsWindow(currPhone);
-                detatilsWindow.ShowDialog();
+                if(detatilsWindow.ShowDialog() == true)
+                {
+                    int i = Phones.IndexOf(currPhone);
+                    Phones[i] = detatilsWindow.onePhone;
+                    Btn_Search_Click(sender, e);
+                    //This part needs to be fixed, phones camera always retunrs 0
+                }
             }
         }
 
