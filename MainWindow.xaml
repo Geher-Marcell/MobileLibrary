@@ -36,14 +36,14 @@
             <GroupBox Header="Kereső" Margin="10" Grid.Row="0" Padding="10" FontSize="14">
                 <StackPanel VerticalAlignment="Center">
                     <TextBox x:Name="Tb_Search" Height="30" Margin="0, 5"></TextBox>
-                    <Button x:Name="Btn_Search">Keresés</Button>
+                    <Button x:Name="Btn_Search" Click="Btn_Search_Click">Keresés</Button>
                 </StackPanel>
             </GroupBox>
             <GroupBox Header="Gombok" Margin="10" Grid.Row="1" Padding="10" FontSize="14">
                 <StackPanel Grid.Row="1" Margin="10" VerticalAlignment="Center">
-                    <Button x:Name="Btn_New">Új felvétele</Button>
-                    <Button x:Name="Btn_Modify">Módosítás</Button>
-                    <Button x:Name="Btn_Delete">Törlés</Button>
+                    <Button x:Name="Btn_New" Click="Btn_New_Click">Új felvétele</Button>
+                    <Button x:Name="Btn_Modify" Click="Btn_Modify_Click">Módosítás</Button>
+                    <Button x:Name="Btn_Delete" Click="Btn_Delete_Click">Törlés</Button>
                 </StackPanel>
             </GroupBox>
         </Grid>

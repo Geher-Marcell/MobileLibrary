@@ -22,5 +22,25 @@ namespace WPF_PROJECT
         {
             InitializeComponent();
         }
+
+        private void Btn_New_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Btn_Modify_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Btn_Delete_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Btn_Search_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
