@@ -5,6 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_PROJECT"
         mc:Ignorable="d"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="SingleBorderWindow"
         Title="Telefon Nyilvántartás" Height="450" Width="600" Closed="Window_Closed">
     <Window.Resources>
         <ResourceDictionary>
