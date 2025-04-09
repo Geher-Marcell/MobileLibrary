@@ -50,7 +50,7 @@
             <GroupBox Grid.Row="1" Header="Eljárások">
                 <StackPanel>
                     <Button Click="Button_Click">Mentés</Button>
-                    <Button Click="Button_Click">Mégsem</Button>
+                    <Button x:Name="btnCancel" Click="btnCancel_Click">Mégsem</Button>
                 </StackPanel>
             </GroupBox>
         </Grid>
