@@ -21,12 +21,20 @@ namespace WPF_PROJECT
     {
         public Phone onePhone { get; set; }
 
-        
+
+        public DetatilsWindow()
+        {
+            InitializeComponent();
+            DataContext = this;
+            onePhone = new Phone();
+        }
+
+
         public DetatilsWindow(Phone phone)
         {
             InitializeComponent();
-            onePhone = phone;
             DataContext = this;
+            onePhone = phone;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
