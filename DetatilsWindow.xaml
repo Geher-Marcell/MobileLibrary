@@ -8,7 +8,7 @@
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         WindowStyle="SingleBorderWindow"
-        Title="Phone Details" Height="500" Width="300">
+        Title="Phone Details" Height="500" Width="600">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -17,46 +17,72 @@
         </ResourceDictionary>
     </Window.Resources>
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="6*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <StackPanel>
-            <StackPanel>
-                <Label Content="Name:"/>
-                <TextBox Margin="20 0" Text="{Binding onePhone.Name}"/>
-            </StackPanel>
-            <StackPanel>
-                <Label Content="Display type:"/>
-                <TextBox Margin="20 0" Text="{Binding onePhone.Display.Type}"/>
-            </StackPanel>
-            <StackPanel>
-                <Label Content="Display size:"/>
-                <TextBox Margin="20 0" Text="{Binding onePhone.Display.Size}"/>
-            </StackPanel>
-            <StackPanel>
-                <Label Content="Release:"/>
-                <TextBox Margin="20 0" Text="{Binding onePhone.Release}"/>
-            </StackPanel>
-            <StackPanel>
-                <Label Content="Battery:"/>
-                <TextBox Margin="20 0" Text="{Binding onePhone.Battery}"/>
-            </StackPanel>
-            <StackPanel>
-                <Label Content="Rom type:"/>
-                <TextBox Margin="20 0" Text="{Binding onePhone.Rom.Type}"/>
-            </StackPanel>
-            <StackPanel>
-                <Label Content="Rom version:"/>
-                <TextBox Margin="20 0" Text="{Binding onePhone.Rom.Version}"/>
-            </StackPanel>
-            <StackPanel>
-                <Label Content="Main camera:"/>
-                <TextBox Margin="20 0" Text="{Binding onePhone.Main_camera}"/>
-            </StackPanel>
-
-        </StackPanel>
-
-        <Button Grid.Row="1" Click="Button_Click">Mentés</Button>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <GroupBox Grid.Row="0" Header="Általános">
+                <StackPanel>
+                    <StackPanel Margin="0 6">
+                        <Label Content="Név:"/>
+                        <TextBox Margin="20 0" Text="{Binding onePhone.Name}"/>
+                    </StackPanel>
+                    <StackPanel Margin="0 6">
+                        <Label Content="Kiadás éve:"/>
+                        <TextBox Margin="20 0" Text="{Binding onePhone.Release}"/>
+                    </StackPanel>
+                    <StackPanel Margin="0 6">
+                        <Label Content="Fő kamera: (Megapixelek)"/>
+                        <TextBox Margin="20 0" Text="{Binding onePhone.Main_camera}"/>
+                    </StackPanel>
+                    <StackPanel>
+                        <Label Content="Battery:"/>
+                        <TextBox Margin="20 0" Text="{Binding onePhone.Battery}"/>
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+            
+            <GroupBox Grid.Row="1" Header="Eljárások">
+                <StackPanel>
+                    <Button Click="Button_Click">Mentés</Button>
+                    <Button Click="Button_Click">Mégsem</Button>
+                </StackPanel>
+            </GroupBox>
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <GroupBox Grid.Row="0" Header="Operációs Rendszer">
+                <StackPanel>
+                    <StackPanel>
+                        <Label Content="Típus:"/>
+                        <TextBox Margin="20 0" Text="{Binding onePhone.Rom.Type}"/>
+                    </StackPanel>
+                    <StackPanel>
+                        <Label Content="Verzió:"/>
+                        <TextBox Margin="20 0" Text="{Binding onePhone.Rom.Version}"/>
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Grid.Row="1" Header="Képernyő">
+                <StackPanel>
+                    <StackPanel>
+                        <Label Content="Technológia:"/>
+                        <TextBox Margin="20 0" Text="{Binding onePhone.Display.Type}"/>
+                    </StackPanel>
+                    <StackPanel>
+                        <Label Content="Méret (inch):"/>
+                        <TextBox Margin="20 0" Text="{Binding onePhone.Display.Size}"/>
+                    </StackPanel>
+                </StackPanel>
+            </GroupBox>
+        </Grid>
     </Grid>
 </Window>
