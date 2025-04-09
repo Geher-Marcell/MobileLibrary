@@ -42,7 +42,7 @@ namespace WPF_PROJECT
         private static readonly JsonSerializerOptions options = new JsonSerializerOptions
         {
             PropertyNameCaseInsensitive = true,
-            PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+            PropertyNamingPolicy = JsonNamingPolicy.SnakeCaseLower,
         };
 
         public ObservableCollection<Phone> FilteredPhones
@@ -86,15 +86,12 @@ namespace WPF_PROJECT
             if (HaveSelectedItem)
             {
                 Phone currPhone = SelectedItem.Clone();
-                MessageBox.Show(currPhone.Name);
-                MessageBox.Show(currPhone.MainCamera.ToString());
                 DetatilsWindow detatilsWindow = new DetatilsWindow(currPhone);
                 if(detatilsWindow.ShowDialog() == true)
                 {
                     int i = Phones.IndexOf(currPhone);
                     Phones[i] = detatilsWindow.onePhone;
                     Btn_Search_Click(sender, e);
-                    //This part needs to be fixed, phones camera always retunrs 0
                 }
             }
         }

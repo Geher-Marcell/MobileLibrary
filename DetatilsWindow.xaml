@@ -38,7 +38,7 @@
                     </StackPanel>
                     <StackPanel Margin="0 6">
                         <Label Content="Fő kamera: (Megapixelek)"/>
-                        <TextBox Margin="20 0" Text="{Binding onePhone.Main_camera}"/>
+                        <TextBox Margin="20 0" Text="{Binding onePhone.MainCamera}"/>
                     </StackPanel>
                     <StackPanel>
                         <Label Content="Battery:"/>
