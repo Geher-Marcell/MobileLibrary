@@ -19,19 +19,30 @@ namespace WPF_PROJECT
     /// </summary>
     public partial class DetatilsWindow : Window
     {
-        public Phone CurrPhone { get; set; }
+        public Phone onePhone { get; set; }
+
         public DetatilsWindow()
         {
             InitializeComponent();
             DataContext = this;
-            CurrPhone = new Phone();
+            onePhone = new Phone();
         }
 
         public DetatilsWindow(Phone phone)
         {
             InitializeComponent();
             DataContext = this;
-            CurrPhone = phone;
+            onePhone = phone;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private bool InputCheck()
+        {
+            return true;
         }
     }
 }
