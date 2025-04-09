@@ -6,6 +6,13 @@
         xmlns:local="clr-namespace:WPF_PROJECT"
         mc:Ignorable="d"
         Title="Phone Details" Height="500" Width="300">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="style.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="6*"/>
@@ -47,6 +54,6 @@
 
         </StackPanel>
 
-        <Button Grid.Row="1" Margin="20 10" FontSize="20" Click="Button_Click">Mentés</Button>
+        <Button Grid.Row="1" Click="Button_Click">Mentés</Button>
     </Grid>
 </Window>
