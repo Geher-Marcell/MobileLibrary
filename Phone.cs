@@ -16,6 +16,13 @@ namespace WPF_PROJECT
         public Rom? Rom { get; set; }
         public int MainCamera { get; set; }
 
+        public Phone()
+        {
+            Display = new Display("", 0);
+            Rom = new Rom("", 0);
+
+        }
+
         public Phone Clone()
         {
             Phone clone = (Phone)MemberwiseClone();
@@ -30,9 +37,14 @@ namespace WPF_PROJECT
 
     public class Display
     {
-        public required string Type { get; set; }
+        public string Type { get; set; }
         public float Size { get; set; }
 
+        public Display(string type, float size)
+        {
+            Size = size;
+            Type = type;
+        }
         public Display Clone()
         {
             return (Display)MemberwiseClone();
@@ -41,8 +53,14 @@ namespace WPF_PROJECT
 
     public class Rom
     {
-        public required string Type { get; set; }
+        public string Type { get; set; }
         public int Version { get; set; }
+
+        public Rom(string type, int version)
+        {
+            Type = type;
+            Version = version;
+        }
 
         public Rom Clone()
         {
