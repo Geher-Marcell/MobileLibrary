@@ -19,9 +19,19 @@ namespace WPF_PROJECT
     /// </summary>
     public partial class DetatilsWindow : Window
     {
+        public Phone CurrPhone { get; set; }
         public DetatilsWindow()
         {
             InitializeComponent();
+            DataContext = this;
+            CurrPhone = new Phone();
+        }
+
+        public DetatilsWindow(Phone phone)
+        {
+            InitializeComponent();
+            DataContext = this;
+            CurrPhone = phone;
         }
     }
 }
