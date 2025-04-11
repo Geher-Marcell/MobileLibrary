@@ -38,21 +38,21 @@ namespace WPF_PROJECT
 
         private bool InputCheck()
         {
-            if (!CheckField(onePhone.Name, string.IsNullOrWhiteSpace, PhoneValidationError.NameEmpty)) return false;
+            if (!CheckField(onePhone.Name, InputChecker.StringValueExp, PhoneValidationError.NameEmpty)) return false;
 
-            if (!CheckField(onePhone.Display!.Size, val => val <= 0, PhoneValidationError.DisplaySizeInvalid)) return false;
+            if (!CheckField(onePhone.Display.Size, InputChecker.NumberValueExp, PhoneValidationError.DisplaySizeInvalid)) return false;
 
-            if (!CheckField(onePhone.Display.Type, string.IsNullOrWhiteSpace, PhoneValidationError.DisplayTypeEmpty)) return false;
+            if (!CheckField(onePhone.Display.Type, InputChecker.StringValueExp, PhoneValidationError.DisplayTypeEmpty)) return false;
 
-            if (!CheckField(onePhone.Release, val => val <= 0, PhoneValidationError.ReleaseDateInvalid)) return false;
+            if (!CheckField(onePhone.Release, InputChecker.NumberValueExp, PhoneValidationError.ReleaseDateInvalid)) return false;
 
-            if (!CheckField(onePhone.Battery, val => val <= 0, PhoneValidationError.BatterySizeInvalid)) return false;
+            if (!CheckField(onePhone.Battery, InputChecker.NumberValueExp, PhoneValidationError.BatterySizeInvalid)) return false;
 
-            if (!CheckField(onePhone.Rom!.Type, string.IsNullOrWhiteSpace, PhoneValidationError.RomTypeEmpty)) return false;
+            if (!CheckField(onePhone.Rom!.Type, InputChecker.StringValueExp, PhoneValidationError.RomTypeEmpty)) return false;
 
-            if (!CheckField(onePhone.Rom.Version, val => val <= 0, PhoneValidationError.RomVersionInvalid)) return false;
+            if (!CheckField(onePhone.Rom.Version, InputChecker.NumberValueExp, PhoneValidationError.RomVersionInvalid)) return false;
 
-            if (!CheckField(onePhone.MainCamera, val => val <= 0, PhoneValidationError.MainCameraInvalid)) return false;
+            if (!CheckField(onePhone.MainCamera, InputChecker.NumberValueExp, PhoneValidationError.MainCameraInvalid)) return false;
 
             return true;
         }
@@ -72,17 +72,18 @@ namespace WPF_PROJECT
         {
             return error switch
             {
-                PhoneValidationError.NameEmpty => "Please, enter the name of the phone",
-                PhoneValidationError.DisplaySizeInvalid => "Please, enter a number bigger than 0 for display size!",
-                PhoneValidationError.DisplayTypeEmpty => "Please enter the display type!",
-                PhoneValidationError.ReleaseDateInvalid => "Please enter the release date!",
-                PhoneValidationError.BatterySizeInvalid => "Please enter the battery size",
-                PhoneValidationError.RomTypeEmpty => "Please enter the ROM type",
-                PhoneValidationError.RomVersionInvalid => "Please enter the version of the Rom",
-                PhoneValidationError.MainCameraInvalid => "Please enter data about the main camera",
-                _ => "Unknown error occurred",
+                PhoneValidationError.NameEmpty => "Kérlek, add meg a telefon nevét!",
+                PhoneValidationError.DisplaySizeInvalid => "Kérlek, adj meg egy 0-nál nagyobb számot a képernyő méretéhez (inch)!",
+                PhoneValidationError.DisplayTypeEmpty => "Kérlek, add meg a képernyő technológiáját!",
+                PhoneValidationError.ReleaseDateInvalid => "Kérlek, add meg a kiadás évét!",
+                PhoneValidationError.BatterySizeInvalid => "Kérlek, add meg az akkumulátor méretét!",
+                PhoneValidationError.RomTypeEmpty => "Kérlek, add meg az operációs rendszer típusát!",
+                PhoneValidationError.RomVersionInvalid => "Kérlek, add meg az operációs rendszer verzióját!",
+                PhoneValidationError.MainCameraInvalid => "Kérlek, add meg az adatok a fő kameráról (megapixel)!",
+                _ => "Ismeretlen hiba történt.",
             };
         }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (InputCheck())

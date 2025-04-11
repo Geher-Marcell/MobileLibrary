@@ -41,7 +41,7 @@
                         <TextBox Margin="20 0" Text="{Binding onePhone.MainCamera}"/>
                     </StackPanel>
                     <StackPanel>
-                        <Label Content="Battery:"/>
+                        <Label Content="Akkumlátor Nagysága:"/>
                         <TextBox Margin="20 0" Text="{Binding onePhone.Battery}"/>
                     </StackPanel>
                 </StackPanel>
