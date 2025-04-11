@@ -89,7 +89,7 @@ namespace WPF_PROJECT
                 DetatilsWindow detatilsWindow = new DetatilsWindow(currPhone);
                 if(detatilsWindow.ShowDialog() == true)
                 {
-                    int i = Phones.IndexOf(currPhone);
+                    int i = Phones.IndexOf(SelectedItem);
                     Phones[i] = detatilsWindow.onePhone;
                     Btn_Search_Click(sender, e);
                 }
@@ -100,7 +100,7 @@ namespace WPF_PROJECT
         {
             if (HaveSelectedItem)
             {
-                MessageBoxResult result = MessageBox.Show($"Are you sure you want to delete {SelectedItem.Name}?", "Delete Confirmation", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                MessageBoxResult result = MessageBox.Show($"Biztosan törölni szeretnéd a(z) {SelectedItem.Name} nevű telefont?", "Törlés megerősítése", MessageBoxButton.YesNo, MessageBoxImage.Warning);
                 if (result == MessageBoxResult.Yes)
                 {
                     Phones.Remove(SelectedItem);

@@ -10,10 +10,10 @@ namespace WPF_PROJECT
     public class Phone
     {
         public string? Name { get; set; }
-        public Display? Display { get; set; }
+        public Display Display { get; set; } = new Display();
         public int Release { get; set; }
         public int Battery { get; set; }
-        public Rom? Rom { get; set; }
+        public Rom Rom { get; set; } = new Rom();
         public int MainCamera { get; set; }
 
         public Phone Clone()
@@ -31,7 +31,7 @@ namespace WPF_PROJECT
     public class Display
     {
         public string Type { get; set; }
-        public float Size { get; set; }
+        public double Size { get; set; }
 
         public Display Clone()
         {
